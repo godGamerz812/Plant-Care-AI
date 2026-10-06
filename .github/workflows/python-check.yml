@@ -1,1 +1,0 @@
-name: Python checks\n\non:\n  push:\n  pull_request:\n\njobs:\n  compile:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: '3.12'\n      - run: python -m py_compile app.py gemma_client.py\n
